@@ -1,3 +1,4 @@
+import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { WebSocketServer, WebSocket } from "ws";
@@ -21,7 +22,7 @@ const wss = new WebSocketServer({ server });
 app.use(cors());
 app.use(express.json());
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 const alerts: Map<string, Alert> = new Map();
 const wsClients = new Map<WebSocket, Set<string>>();
@@ -186,8 +187,10 @@ setInterval(checkAlerts, 1000);
 
 startMarketData();
 
+const BASE_URL = process.env.BASE_URL || `http://localhost:${PORT}`;
+
 server.listen(PORT, () => {
-  console.log(`Market Data Service running on http://localhost:${PORT}`);
+  console.log(`Market Data Service running on ${BASE_URL}`);
   console.log(`WebSocket server running on ws://localhost:${PORT}`);
 });
 

@@ -1,5 +1,7 @@
 import { Ticker, PricePoint } from "./types";
 
+const BASE_URL = process.env.BASE_URL || "http://localhost:4000";
+
 const TICKERS_CONFIG: Array<{
   symbol: string;
   name: string;
@@ -12,56 +14,56 @@ const TICKERS_CONFIG: Array<{
     name: "Apple Inc.",
     price: 185.5,
     volatility: 0.005,
-    logo: "http://localhost:4000/logos/aapl-logo.svg",
+    logo: `${BASE_URL}/logos/aapl-logo.svg`,
   },
   {
     symbol: "TSLA",
     name: "Tesla Inc.",
     price: 248.75,
     volatility: 0.012,
-    logo: "http://localhost:4000/logos/tsla-logo.svg",
+    logo: `${BASE_URL}/logos/tsla-logo.svg`,
   },
   {
     symbol: "GOOGL",
     name: "Google Inc.",
     price: 142.3,
     volatility: 0.008,
-    logo: "http://localhost:4000/logos/googl-logo.svg",
+    logo: `${BASE_URL}/logos/googl-logo.svg`,
   },
   {
     symbol: "AMZN",
     name: "Amazon.com Inc.",
     price: 178.9,
     volatility: 0.009,
-    logo: "http://localhost:4000/logos/amazon-logo.svg",
+    logo: `${BASE_URL}/logos/amazon-logo.svg`,
   },
   {
     symbol: "MSFT",
     name: "Microsoft Corp.",
     price: 378.25,
     volatility: 0.006,
-    logo: "http://localhost:4000/logos/msft-logo.svg",
+    logo: `${BASE_URL}/logos/msft-logo.svg`,
   },
   {
     symbol: "NVDA",
     name: "NVIDIA Corp.",
     price: 495.8,
     volatility: 0.015,
-    logo: "http://localhost:4000/logos/nvda-icon.svg",
+    logo: `${BASE_URL}/logos/nvda-icon.svg`,
   },
   {
     symbol: "BTC-USD",
     name: "Bitcoin",
     price: 43250.0,
     volatility: 0.02,
-    logo: "http://localhost:4000/logos/btc-usd-logo.svg",
+    logo: `${BASE_URL}/logos/btc-usd-logo.svg`,
   },
   {
     symbol: "ETH-USD",
     name: "Ethereum",
     price: 2280.0,
     volatility: 0.018,
-    logo: "http://localhost:4000/logos/eth-usd-logo.svg",
+    logo: `${BASE_URL}/logos/eth-usd-logo.svg`,
   },
 ];
 
