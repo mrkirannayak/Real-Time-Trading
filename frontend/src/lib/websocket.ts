@@ -6,7 +6,7 @@ import { updateTickers, setConnected } from './redux/marketSlice';
 import { addNotification } from './redux/alertsSlice';
 import { Ticker } from './types';
 
-const WS_URL = 'ws://localhost:4000';
+const WS_URL = process.env.NEXT_PUBLIC_WS_URL || 'ws://localhost:4000';
 
 export function useWebSocket(symbols: string[] = []) {
   const dispatch = useAppDispatch();
