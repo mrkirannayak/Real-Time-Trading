@@ -176,6 +176,16 @@ WebSocket ws://localhost:4000
 
 ---
 
+## Hub.Docker
+
+---
+https://hub.docker.com/r/mrkirannayak/tradingbackend
+https://hub.docker.com/r/mrkirannayak/tradingfrontend
+
+---
+
+
+
 ## 🧠 State Management
 
 Redux Toolkit slices:
